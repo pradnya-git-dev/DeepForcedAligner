@@ -67,7 +67,7 @@ if __name__ == '__main__':
     text_dict = read_metafile(paths.metadata_path)
     symbols = set()
     for text in text_dict.values():
-        symbols.update(set(text))
+        symbols.update(set(text.split()))
     symbols = sorted(list(symbols))
 
     if paths.precomputed_mels:
